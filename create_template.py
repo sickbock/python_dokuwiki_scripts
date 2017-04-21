@@ -27,7 +27,7 @@ def ctemplate(wikidir,tags):
             myfile = open(dirpath+'/_template.txt', 'w')
             lines = ['{{tag>'+tags+' }}\n',';;#\n','[[?do=export_pdf|PDF export]]\n',
                      ';;#\n','~~CLOSETOC~~\n','~~TOC:1-4~~\n','====== @!FILE@ ======\n',
-                     '\n','\n','\n','[[|Back to top]] \\ \n','<sub>\n',
+                     '\n','\n','\n','[[|Back to top]]\n','\n','\n','<sub>\n',
                      'Created: %Y-%m-%d by @NAME@\n','</sub>\n']
             myfile.writelines(lines)
             myfile.close()
