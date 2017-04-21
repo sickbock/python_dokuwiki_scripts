@@ -8,7 +8,7 @@
 # Run as the apache user from /etc/cron.d/dokuwiki
 # Works with Python 2.6 - 3.6
 #
-# Joachim la Poutre' 2017
+# Joachim la Poutre' 2017-04
 ################################################################################
 import sys, os
 
