@@ -13,7 +13,7 @@
 import sys, os
 
 def ctemplate(wikidir,tags):
-    """ (str, str) -> file
+    """ (str, str) -> NoneType
 
     Search a Dokuwiki directory (first string) for 
     sub-directories without a '_template.txt', 
