@@ -43,8 +43,9 @@ def ctemplate(wikidir,tags):
     for dirpath, subdirs, files in os.walk(wikidir):
         if not 'start.txt' in files:
             myfile = open(dirpath+'/start.txt', 'w')
-            title = dirpath.split('/')[-1]
-            dwpath = re.sub('.*data/pages/', '', dirpath)
+            dwpath = dirpath.rstrip('/')
+            title = dwpath.split('/')[-1]
+            dwpath = re.sub('.*data/pages/', '', dirpath)           
             dwpath = dwpath.replace('/',':')+":start.txt"
             lines = ['{{tag>'+tags+' }}\n','\n',
                      '====== '+title.capitalize()+' ======\n',
