@@ -46,7 +46,7 @@ def ctemplate(wikidir,tags):
             dwpath = dirpath.rstrip('/')
             title = dwpath.split('/')[-1]
             dwpath = re.sub('.*data/pages/', '', dwpath)           
-            dwpath = dwpath.replace('/',':')+":start.txt"
+            dwpath = dwpath.replace('/',':')+":start"
             lines = ['{{tag>'+tags+' }}\n','\n',
                      '====== '+title.capitalize()+' ======\n',
                      "Create a new page using the form and drop-down menu's",'\n',
