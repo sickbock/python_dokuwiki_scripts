@@ -45,7 +45,7 @@ def ctemplate(wikidir,tags):
             myfile = open(dirpath+'/start.txt', 'w')
             dwpath = dirpath.rstrip('/')
             title = dwpath.split('/')[-1]
-            dwpath = re.sub('.*data/pages/', '', dirpath)           
+            dwpath = re.sub('.*data/pages/', '', dwpath)           
             dwpath = dwpath.replace('/',':')+":start.txt"
             lines = ['{{tag>'+tags+' }}\n','\n',
                      '====== '+title.capitalize()+' ======\n',
