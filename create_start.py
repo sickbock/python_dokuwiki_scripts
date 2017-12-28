@@ -19,6 +19,7 @@
 #  - https://www.dokuwiki.org/plugin:newpagetemplate (for advanced templates)
 #  - optional: 
 #    - https://www.dokuwiki.org/plugin:tag
+#    - https://www.dokuwiki.org/plugin:nspages to list all pages in name space
 #    
 # Create the templates you use in the default folder 'pagetemplates', e.g.
 #   newpgtpl1, newpgtpl2 and - for a start page in a new namespace: startpage
@@ -56,9 +57,11 @@ def ctemplate(wikidir,tags):
                      "    * A new sub namespace: **''newnamespace:start''**",'\n'
                      "  - Select the required template from the right menu<div>",'\n',
                      "{{NEWPAGE#pagetemplates:newpgtpl1|Simple template,pagetemplates:newpgtpl2|Template with link,pagetemplates:startpage|Start page}}",
-                     "\n</div>",'\n','\n',
-                     '[['+dwpath+'|Back to top]]\n','\n','\n','\n','<sub>\n',
-                     'Created: %Y-%m-%d','\n','</sub>\n']
+                     "\n</div>",'\n','Pages and sub name spaces in this name space:','\n',
+                     '<nspages -subns -h1 -simpleList -exclude:start -textPages="" -textNS="">',
+                     '\n','\n','\n',
+                     '[['+dwpath+'|Back to top]]\n','\n','\n','\n']
+#                     '<sub>\n','Created: %Y-%m-%d','\n','</sub>\n']
             myfile.writelines(lines)
             myfile.close()
 
